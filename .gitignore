@@ -13,7 +13,9 @@ deoxys/bin
 deoxys/include
 deoxys/lib
 deoxys/logs
+deoxys/DATA
 *egg-info
 __pycache__
 data_collection_example
 *_pb2.py
+.vscode/

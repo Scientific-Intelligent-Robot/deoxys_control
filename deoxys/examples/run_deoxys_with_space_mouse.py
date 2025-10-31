@@ -15,9 +15,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--interface-cfg", type=str, default="config/charmander.yml")
     parser.add_argument("--controller-type", type=str, default="OSC_POSE")
+    # parser.add_argument("--controller-type", type=str, default="OSC_POSITION")
 
     parser.add_argument("--vendor-id", type=int, default=9583)
-    parser.add_argument("--product-id", type=int, default=50734)
+    parser.add_argument("--product-id", type=int, default=50746)
 
     args = parser.parse_args()
 

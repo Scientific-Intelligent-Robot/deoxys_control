@@ -110,7 +110,7 @@ class SpaceMouse:
     """
 
     def __init__(
-        self, vendor_id=9583, product_id=50735, pos_sensitivity=1.0, rot_sensitivity=1.0
+        self, vendor_id=9583, product_id=50735, pos_sensitivity=1.0, rot_sensitivity=0.6
     ):
 
         print("Opening SpaceMouse device")
