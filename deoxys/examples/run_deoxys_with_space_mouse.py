@@ -1,6 +1,11 @@
 import argparse
 import time
 
+
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from deoxys.franka_interface import FrankaInterface
 from deoxys.utils.config_utils import get_default_controller_config
 from deoxys.utils.input_utils import input2action
@@ -17,7 +22,7 @@ def main():
     parser.add_argument("--controller-type", type=str, default="OSC_POSE")
 
     parser.add_argument("--vendor-id", type=int, default=9583)
-    parser.add_argument("--product-id", type=int, default=50734)
+    parser.add_argument("--product-id", type=int, default=50746)
 
     args = parser.parse_args()
 
@@ -47,7 +52,7 @@ def main():
         )
         end_time = time.time_ns()
         logger.debug(f"Time duration: {((end_time - start_time) / (10**9))}")
-
+        print(action)
     robot_interface.control(
         controller_type=controller_type,
         action=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0] + [1.0],
