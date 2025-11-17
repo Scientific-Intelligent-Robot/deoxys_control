@@ -1,6 +1,11 @@
 import argparse
 import time
 
+
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from deoxys.franka_interface import FrankaInterface
 from deoxys.utils.config_utils import get_default_controller_config
 from deoxys.utils.input_utils import input2action
@@ -48,7 +53,7 @@ def main():
         )
         end_time = time.time_ns()
         logger.debug(f"Time duration: {((end_time - start_time) / (10**9))}")
-
+        print(action)
     robot_interface.control(
         controller_type=controller_type,
         action=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0] + [1.0],
