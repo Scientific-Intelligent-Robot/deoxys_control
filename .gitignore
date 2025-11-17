@@ -14,6 +14,7 @@ deoxys/include
 deoxys/lib
 deoxys/logs
 deoxys/DATA
+deoxys/save_inference_images
 *egg-info
 __pycache__
 data_collection_example

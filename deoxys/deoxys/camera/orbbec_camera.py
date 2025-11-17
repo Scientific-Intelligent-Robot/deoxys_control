@@ -18,7 +18,7 @@ def frame_to_bgr_image(frame):
     format = frame.get_format()
     
     # Print debug information
-    print(f"{format}, {width}x{height}, Data size: {len(data)}")
+    # print(f"{format}, {width}x{height}, Data size: {len(data)}")
     
     if format == OBFormat.BGR:
         return np.frombuffer(data, dtype=np.uint8).reshape((height, width, 3))
